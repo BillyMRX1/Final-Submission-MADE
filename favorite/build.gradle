@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.dynamic-feature'
+    id 'com.squareup.leakcanary.deobfuscation'
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
@@ -23,7 +24,6 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles 'proguard-rules.pro'
         }
     }
 
@@ -44,7 +44,4 @@ android {
 dependencies {
     implementation project(":app")
     implementation project(":core")
-
-    //ui
-    implementation "com.airbnb.android:lottie:$lottieVersion"
 }
