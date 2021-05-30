@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+apply from: '../shared_dependencies.gradle'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        buildConfigField("String", "BASE_URL", '"https://api.jikan.moe/v3/"')
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesCoreVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
+    //room
+    implementation "androidx.room:room-runtime:$roomRuntimeVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$roomVersion"
+
+    //sqlcipher
+    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
+    implementation "androidx.sqlite:sqlite-ktx:2.1.0"
+}

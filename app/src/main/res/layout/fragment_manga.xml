@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    tools:context=".manga.MangaFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_manga"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_auto_start="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <include layout="@layout/item_manga" />
+
+                    <include layout="@layout/item_manga" />
+
+                    <include layout="@layout/item_manga" />
+
+                    <include layout="@layout/item_manga" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <include layout="@layout/item_manga" />
+
+                    <include layout="@layout/item_manga" />
+
+                    <include layout="@layout/item_manga" />
+
+                    <include layout="@layout/item_manga" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <include
+        android:id="@+id/view_error"
+        layout="@layout/view_error"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

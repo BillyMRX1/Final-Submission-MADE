@@ -1,0 +1,24 @@
+dependencies {
+    //kotlin
+    implementation "androidx.core:core-ktx:$coreVersion"
+
+    //ui
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintVersion"
+    implementation "androidx.legacy:legacy-support-v4:$legacyVersion"
+    implementation "androidx.multidex:multidex:$multidexVersion"
+    implementation "androidx.cardview:cardview:$cardviewVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+    //testing
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$extJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
+
+    //koin
+    implementation "org.koin:koin-core:$koin_version"
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+}
