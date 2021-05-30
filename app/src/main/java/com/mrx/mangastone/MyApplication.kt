@@ -1,11 +1,11 @@
 package com.mrx.mangastone
 
 import android.app.Application
-import com.mrx.mangastone.di.useCaseModule
-import com.mrx.mangastone.di.viewModelModule
 import com.mrx.core.di.databaseModule
 import com.mrx.core.di.networkModule
 import com.mrx.core.di.repositoryModule
+import com.mrx.mangastone.di.useCaseModule
+import com.mrx.mangastone.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

@@ -20,6 +20,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildTypes {
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'lib-proguard-rules.txt'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

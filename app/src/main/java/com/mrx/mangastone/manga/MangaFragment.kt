@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import com.mrx.core.data.Resource
+import com.mrx.core.ui.MangaAdapter
 import com.mrx.mangastone.R
 import com.mrx.mangastone.databinding.FragmentMangaBinding
 import com.mrx.mangastone.detail.DetailActivity
-import com.mrx.core.data.Resource
-import com.mrx.core.ui.MangaAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MangaFragment : Fragment() {

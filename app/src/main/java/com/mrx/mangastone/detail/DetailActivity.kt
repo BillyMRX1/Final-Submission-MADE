@@ -5,9 +5,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
+import com.mrx.core.domain.model.Manga
 import com.mrx.mangastone.R
 import com.mrx.mangastone.databinding.ActivityDetailBinding
-import com.mrx.core.domain.model.Manga
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailActivity : AppCompatActivity() {
