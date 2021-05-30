@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="favorite_is_empty">Favorit Kosong...</string>
-    <string name="title_favorite">Favorit</string>
+    <string name="favorite_is_empty">Favorit Kosong…</string>
 </resources>

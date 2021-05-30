@@ -1,5 +1,4 @@
 <resources>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="favorite_is_empty">Favorite is Empty...</string>
-    <string name="title_favorite">Favorite</string>
+    <string name="favorite_is_empty">Favorite is Empty…</string>
 </resources>
