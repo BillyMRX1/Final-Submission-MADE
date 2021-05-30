@@ -22,5 +22,9 @@ dependencies {
     implementation "io.insert-koin:koin-android:3.0.2"
 
     //leak canary
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+    //sqlcipher
+    implementation 'net.zetetic:android-database-sqlcipher:4.4.3'
+    implementation "androidx.sqlite:sqlite-ktx:2.1.0"
 }
