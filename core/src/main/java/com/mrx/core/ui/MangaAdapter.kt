@@ -45,7 +45,7 @@ class MangaAdapter : RecyclerView.Adapter<MangaAdapter.ViewHolder>() {
 
         init {
             binding.root.setOnClickListener {
-                onItemClick?.invoke(listData[adapterPosition])
+                onItemClick?.invoke(listData[absoluteAdapterPosition])
             }
         }
     }

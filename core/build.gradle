@@ -43,7 +43,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesCoreVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
     api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
@@ -60,6 +59,6 @@ dependencies {
     androidTestImplementation "androidx.room:room-testing:$roomVersion"
 
     //sqlcipher
-    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
+    implementation 'net.zetetic:android-database-sqlcipher:4.4.3'
     implementation "androidx.sqlite:sqlite-ktx:2.1.0"
 }
